@@ -51,7 +51,7 @@ def get_as_tags(bundle_name, extension=None, config='DEFAULT', attrs=''):
             ).format(chunk['url'], attrs))
         elif chunk['name'].endswith(('.css', '.css.gz')):
             tags.append((
-                '<link rel="stylesheet" href="{0}" {1}/>'
+                '<link href="{0}" {1}/>'
             ).format(chunk['url'], attrs))
     return tags
 
